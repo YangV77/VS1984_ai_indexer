@@ -123,7 +123,7 @@ void log_handler(const log_cb_t* log_data) {
                 {
                     char *pack = package_tasks_get(infohash);
                     char pack_path[256];
-                    snprintf(pack_path, sizeof(pack_path), "vshome/dat/self/%s", pack);
+                    snprintf(pack_path, sizeof(pack_path), "dat/self/%s", pack);
                     char *pack_path_ = strdup(pack_path);
                     char *json_raw = read_file_to_string(pack_path_);
                     if (json_raw == NULL) return;

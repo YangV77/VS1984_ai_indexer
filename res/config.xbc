@@ -1,8 +1,8 @@
 {
   "share": {"max": 15},
   "app": "-p 0",
-  "bt": {"startup": true, "config": "vshome/cnf/bt.conf", "bt_path" : "."},
-  "rag": {"indexer": true, "model": "../../vs1984_models/gemma-3-1b-it-Q4_K_M.gguf", "rag_path" : "."},
+  "bt": {"startup": true, "config": "cnf/bt.conf", "bt_path" : "."},
+  "rag": {"indexer": true, "model": "../models/gemma-3-1b-it-Q4_K_M.gguf", "rag_path" : "."},
   "tls": {"pass": "123123"},
   "routes": "cnf/routes.json",
   "env": "MTg1MzU3OTk3MUF1aDdzQmVweFJ4ZWdWMzFYUnlzNlV0ekttUWxGZ0xselpadXloN3Mvc1E0TUVVQ0lRQ2NEM0ZNZFVHclZWVjZ3NmhDdUlOZjFHMUNkSHpEMFpjU1hxWkwwbVlDWlFJZ1ZLN1FKN2t0VjlhdFNTTkhVRjNDZnJVRlVzazRBam54V0VYdUg1K2pBcmc9"
