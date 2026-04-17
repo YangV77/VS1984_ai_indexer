@@ -1,6 +1,6 @@
 
 # VS1984 Ai Indexer概览
-***现阶段, 只支持ubuntu24.04***
+***现阶段, 只支持基于ubuntu24.04和nvidia显卡***
 
 [English](README.md) | [中文](README.zh-CN.md)
 
