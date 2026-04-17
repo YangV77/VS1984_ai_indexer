@@ -56,6 +56,22 @@ Indexer 的存在解决了一个关键问题：
 
 > 在没有中心服务器的情况下，**如何找到“谁有你想要的数据”？**
 
+## 准备模型:
+```
+去 Hugging Face（搜索 gemma-3-1b-it-Q4_K_M.gguf, 其他模型需要你配置vshome/cnf/config.xbc），常见是 *-GGUF 仓库（如 bartowski/... 或 unsloth/... 这类）。
+下载到本地 ./models
+```
+
+## 配置
+```text
+ 在config.xbc配置文件中配置:
+   "rag": {"indexer": true, "model": "models/gemma-3-1b-it-Q4_K_M.gguf", "rag_path" : "."},
+   "indexer": true 表示：表示此节点为Indexer节点
+   "model": "model_path" 是你本地llm模型的路径
+   "rag_path" : "." 表示rag子程序的路径
+ 可以在启动程序时增加-dd 来查看更详细的日志,具体可以参考VS1984的说明书
+```
+
 ## 初次运行
 ```text
 生成证书

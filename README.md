@@ -69,6 +69,32 @@ The existence of Indexer solves a key problem:
 
 > Without a central server, **how to find "who has the data you want"?**
 
+## Preparing the Model:
+
+Go to Hugging Face (search for gemma-3-1b-it-Q4_K_M.gguf; other models require you to configure vshome/cnf/config.xbc). Common repositories are *-GGUF repositories (such as bartowski/... or unsloth/...).
+
+Download to your local machine: ./models
+
+```
+
+## Configuration
+
+```text
+
+In the config.xbc configuration file:
+
+"rag": {"indexer": true, "model": "models/gemma-3-1b-it-Q4_K_M.gguf", "rag_path" : "."},
+
+"indexer": true indicates that this node is an Indexer node.
+
+"model": "model_path" is the path to your local LLM model.
+
+"rag_path": "." indicates the path to the rag subroutine.
+
+You can add -dd when starting the program to view more detailed logs. Refer to the VS1984 documentation for details.
+
+```
+
 ## Initial Run
 
 ```text Generate certificate
