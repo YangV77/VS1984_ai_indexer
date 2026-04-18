@@ -1,5 +1,5 @@
 # VS1984 Ai Indexer Overview
-*Currently, only base on Ubuntu 24.04 and nvidia gpu.*
+*Currently, only base on Ubuntu 24.04 and nvidia gpu. will support more sooner*
 
 [English](README.md) | [中文](README.zh-CN.md)
 
