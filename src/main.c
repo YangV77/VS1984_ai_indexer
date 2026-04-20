@@ -123,7 +123,7 @@ void log_handler(const log_cb_t* log_data) {
                 {
                     char *pack = package_tasks_get(infohash);
                     char pack_path[256];
-                    snprintf(pack_path, sizeof(pack_path), "dat/self/%s", pack);
+                    snprintf(pack_path, sizeof(pack_path), "vshome/dat/self/%s", pack);
                     char *pack_path_ = strdup(pack_path);
                     char *json_raw = read_file_to_string(pack_path_);
                     if (json_raw == NULL) return;
@@ -132,7 +132,7 @@ void log_handler(const log_cb_t* log_data) {
                     char *provider = cJSON_GetStringValue(cJSON_GetObjectItem(json_obj,"provider"));
 
                     char cmd[256];
-                    snprintf(cmd, sizeof(cmd), "cmd idx embed \'%s\' %s", provider, summary);
+                    snprintf(cmd, sizeof(cmd), "cmd idx embed \'%s\' \'%s\'", provider, summary);
                     run_cmd(cmd);
                     package_tasks_delete(infohash);
                     cJSON_Delete(json_obj);
@@ -155,7 +155,7 @@ void log_handler(const log_cb_t* log_data) {
                     {
                         char *search = cJSON_GetStringValue(cJSON_GetObjectItem(idx_obj, "search"));
                         char cmd[4096];
-                        snprintf(cmd, sizeof(cmd), "cmd idx search %s %s", search_from_id, search);
+                        snprintf(cmd, sizeof(cmd), "cmd idx search \'%s\' \'%s\'", search_from_id, search);
                         char *cmd_ = strdup(cmd);
                         run_cmd(cmd_);
                         free(cmd_);
